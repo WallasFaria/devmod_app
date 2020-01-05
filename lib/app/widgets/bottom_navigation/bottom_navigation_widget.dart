@@ -79,11 +79,8 @@ class BottomNavigationWidget extends StatelessWidget {
             type: BottomNavigationBarType.fixed,
             selectedFontSize: 10.0,
             unselectedFontSize: 10.0,
-            unselectedItemColor: Theme.of(context).textTheme.caption.color,
             selectedItemColor: Theme.of(context).primaryColor,
             backgroundColor: Theme.of(context).bottomAppBarColor,
-            unselectedIconTheme:
-                IconThemeData(color: Theme.of(context).textTheme.caption.color),
             onTap: controller.onItemTapped,
           ),
         );
