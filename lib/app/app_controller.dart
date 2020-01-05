@@ -1,8 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
 part 'app_controller.g.dart';
-
-enum ThemeMode { dark, light }
 
 class AppController = _AppBase with _$AppController;
 

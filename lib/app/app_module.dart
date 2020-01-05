@@ -1,3 +1,4 @@
+// import 'package:devmod_app/app/modules/about/about_controller.dart';
 import 'package:devmod_app/app/widgets/bottom_navigation/bottom_navigation_controller.dart';
 import 'package:devmod_app/app/widgets/event_card/event_card_controller.dart';
 import 'package:devmod_app/app/app_controller.dart';
@@ -8,6 +9,7 @@ import 'package:devmod_app/app/app_widget.dart';
 class AppModule extends ModuleWidget {
   @override
   List<Bloc> get blocs => [
+        // Bloc((i) => AboutController()),
         Bloc((i) => BottomNavigationController()),
         Bloc((i) => EventCardController()),
         Bloc((i) => AppController()),

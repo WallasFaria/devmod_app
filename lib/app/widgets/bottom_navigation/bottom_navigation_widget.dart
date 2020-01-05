@@ -1,5 +1,6 @@
 import 'package:devmod_app/app/app_controller.dart';
 import 'package:devmod_app/app/app_module.dart';
+import 'package:devmod_app/app/modules/about/about_page.dart';
 import 'package:devmod_app/app/modules/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,11 +15,11 @@ class BottomNavigationWidget extends StatelessWidget {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     Center(child: Text('Index 1: Business', style: optionStyle)),
     Center(child: Text('Index 2: School', style: optionStyle)),
-    Center(child: Text('Index 3: School', style: optionStyle)),
+    AboutPage(),
   ];
 
   @override
@@ -59,7 +60,7 @@ class BottomNavigationWidget extends StatelessWidget {
                 ),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(Icons.people),
                 title: Padding(
                   padding: EdgeInsets.only(top: 6.0),
                   child: Text('Membros'),
