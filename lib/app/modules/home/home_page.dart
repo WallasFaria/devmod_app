@@ -26,15 +26,21 @@ class _HomePageState extends State<HomePage> {
           slivers: <Widget>[
             SliverAppBar(
               centerTitle: true,
-              floating: true,
+              floating: false,
+              pinned: true,
+              elevation: 1.0,
               brightness: appController.themeIsLight
                   ? Brightness.light
                   : Brightness.dark,
               backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-              title: Text(
-                '_DEV.Mode',
-                style:
-                    TextStyle(color: Theme.of(context).textTheme.title.color),
+              expandedHeight: 80,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                title: Text(
+                  '_DEV.Mode',
+                  style:
+                      TextStyle(color: Theme.of(context).textTheme.title.color),
+                ),
               ),
             ),
             SliverList(
