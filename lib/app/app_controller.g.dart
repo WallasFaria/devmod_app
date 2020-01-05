@@ -9,6 +9,24 @@ part of 'app_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$AppController on _AppBase, Store {
+  Computed<bool> _$themeIsDarkComputed;
+
+  @override
+  bool get themeIsDark =>
+      (_$themeIsDarkComputed ??= Computed<bool>(() => super.themeIsDark)).value;
+  Computed<bool> _$themeIsLightComputed;
+
+  @override
+  bool get themeIsLight =>
+      (_$themeIsLightComputed ??= Computed<bool>(() => super.themeIsLight))
+          .value;
+  Computed<String> _$themeModeStringComputed;
+
+  @override
+  String get themeModeString => (_$themeModeStringComputed ??=
+          Computed<String>(() => super.themeModeString))
+      .value;
+
   final _$themeModeAtom = Atom(name: '_AppBase.themeMode');
 
   @override

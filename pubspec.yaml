@@ -51,7 +51,9 @@ flutter:
   assets:
    - assets/logo_light.png
    - assets/logo_dark.png
-   - assets/javascript.png
+
+   - assets/mock/javascript.png
+   - assets/mock/member.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

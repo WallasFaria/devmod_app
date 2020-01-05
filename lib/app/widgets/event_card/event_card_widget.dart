@@ -4,7 +4,7 @@ class EventCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       borderOnForeground: true,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
       child: Column(
@@ -15,7 +15,7 @@ class EventCardWidget extends StatelessWidget {
               topLeft: Radius.circular(6),
               topRight: Radius.circular(6),
             ),
-            child: Image.asset('assets/javascript.png'),
+            child: Image.asset('assets/mock/javascript.png'),
           ),
           Container(
             padding: const EdgeInsets.symmetric(
