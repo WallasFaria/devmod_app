@@ -15,6 +15,9 @@ abstract class _AppBase with Store {
   @computed
   bool get themeIsLight => themeMode == ThemeMode.light;
 
+  @computed
+  String get themeModeString => themeMode == ThemeMode.light ? 'light' : 'dark';
+
   @action
   void setThemeMode(ThemeMode mode) {
     themeMode = mode;

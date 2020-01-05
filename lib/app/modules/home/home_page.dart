@@ -40,7 +40,9 @@ class _HomePageState extends State<HomePage> {
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Image.asset('assets/logo.png', width: 160),
+                      child: Image.asset(
+                          'assets/logo_${appController.themeModeString}.png',
+                          width: 160),
                     ),
                   ),
                   Padding(padding: EdgeInsets.all(12)),

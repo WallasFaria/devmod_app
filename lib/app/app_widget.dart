@@ -10,11 +10,11 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Observer(
       builder: (_) => MaterialApp(
-        title: 'Flutter Slidy',
+        title: 'DevMode',
         debugShowCheckedModeBanner: false,
         theme: AppModule.to.bloc<AppController>().themeIsLight
             ? ThemeData.light().copyWith(primaryColor: Color(0xFF00ADEF))
-            : ThemeData.dark().copyWith(primaryColor: Color(0xFF00ADEF)),
+            : ThemeData.dark().copyWith(primaryColor: Color(0xFFF5B53D)),
         home: BottomNavigationWidget(),
       ),
     );
