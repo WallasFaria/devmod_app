@@ -35,7 +35,7 @@ dev_dependencies:
     sdk: flutter
 
 scripts:
-  mobx: flutter packages pub run build_runner build
+  watch: flutter packages pub run build_runner watch --delete-conflicting-outputs
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
