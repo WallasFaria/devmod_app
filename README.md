@@ -1,16 +1,43 @@
-# devmod_app
+# DevMod App
 
-&#x27;A new Flutter project. Created by Slidy&#x27;
+Aplicativo da comunidade de desenvolvedores de campos
 
-## Getting Started
+## Objetivos
+- Se manter atualizado sobre os próximos eventos
+- Manter um históricos dos eventos já realizados, com fotos e outros possíveis conteúdos
+- fácil acesso a lista de membros
 
-This project is a starting point for a Flutter application.
+## Técnologia usada
 
-A few resources to get you started if this is your first Flutter project:
+[Flutter](https://flutter.dev/docs)
 
+Referencias:
+- [online documentation](https://flutter.dev/docs), which offers tutorials,
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Rodando projeto:
+
+Com o flutter instalado em sua máquina:
+
+- clone o projeto
+  ```
+  git clone git@github.com:WallasFaria/devmod_app.git
+  ```
+
+- entre na pasta
+  ```
+  cd devmod_app
+  ```
+
+- instale as dependências
+  ```
+  flutter pub get
+  ```
+
+- inicie seu emulador Android ou IOS
+
+- e por último, rode o projeto
+  ```
+  flutter run
+  ```
