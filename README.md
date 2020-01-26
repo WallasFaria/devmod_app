@@ -9,7 +9,8 @@ Aplicativo da comunidade de desenvolvedores de campos
 
 ## Técnologia usada
 
-[Flutter](https://flutter.dev/docs)
+- [Flutter](https://flutter.dev/docs)
+- [Slidy - Um gerenciador de pacotes CLI e gerador de templates para Flutter](https://github.com/Flutterando/slidy)
 
 Referencias:
 - [online documentation](https://flutter.dev/docs), which offers tutorials,
