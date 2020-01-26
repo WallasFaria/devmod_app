@@ -30,11 +30,6 @@ Com o flutter instalado em sua máquina:
   cd devmod_app
   ```
 
-- instale as dependências
-  ```
-  flutter pub get
-  ```
-
 - inicie seu emulador Android ou IOS
 
 - e por último, rode o projeto
