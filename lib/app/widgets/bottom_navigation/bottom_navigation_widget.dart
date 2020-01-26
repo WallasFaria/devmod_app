@@ -35,9 +35,9 @@ class BottomNavigationWidget extends StatelessWidget {
                 appController.themeIsLight ? Brightness.dark : Brightness.light,
             statusBarIconBrightness:
                 appController.themeIsLight ? Brightness.dark : Brightness.light,
-            systemNavigationBarColor: Theme.of(context).scaffoldBackgroundColor,
-            systemNavigationBarIconBrightness:
-                appController.themeIsLight ? Brightness.dark : Brightness.light,
+            systemNavigationBarColor: Colors.black,
+            // systemNavigationBarIconBrightness:
+            //     appController.themeIsLight ? Brightness.dark : Brightness.light,
           ),
         );
 
@@ -79,6 +79,7 @@ class BottomNavigationWidget extends StatelessWidget {
             type: BottomNavigationBarType.fixed,
             selectedFontSize: 10.0,
             unselectedFontSize: 10.0,
+            elevation: 18,
             selectedItemColor: Theme.of(context).primaryColor,
             backgroundColor: Theme.of(context).bottomAppBarColor,
             onTap: controller.onItemTapped,
