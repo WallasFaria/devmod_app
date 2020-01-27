@@ -1,6 +1,6 @@
 ## [Potótipo de design](https://xd.adobe.com/view/e50b573b-318c-45cc-60dd-33567e1eea0a-933a/)
 
-<img src="docs/assets/prototipo.gif" width="200em" />
+<img src="assets/prototipo.gif" width="200em" />
 
 [Link](https://xd.adobe.com/view/e50b573b-318c-45cc-60dd-33567e1eea0a-933a/)
 
@@ -30,4 +30,4 @@
 
 ## Estágio atual:
 
-<img src="docs/assets/estagio-atual.gif" width="200em" />
+<img src="assets/estagio-atual.gif" width="200em" />
