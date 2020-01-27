@@ -1,4 +1,4 @@
-# DevMod App
+# DevMode App
 
 Aplicativo da comunidade de desenvolvedores de campos
 
@@ -6,6 +6,10 @@ Aplicativo da comunidade de desenvolvedores de campos
 - Se manter atualizado sobre os próximos eventos
 - Manter um históricos dos eventos já realizados, com fotos e outros possíveis conteúdos
 - fácil acesso a lista de membros
+
+Protótipo:
+
+<a href="https://xd.adobe.com/view/e50b573b-318c-45cc-60dd-33567e1eea0a-933a/" target="_blank"><img src="docs/assets/prototipo.gif" width="200em" /></a>
 
 ## Técnologia usada
 
