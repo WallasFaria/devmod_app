@@ -37,3 +37,7 @@ Com o flutter instalado em sua máquina:
   ```
   flutter run
   ```
+
+## Contribuir
+
+[Link do Escopo](docs/escopo.md)
