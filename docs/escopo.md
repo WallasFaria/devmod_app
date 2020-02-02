@@ -28,6 +28,20 @@
 [ ] Criar tela de listagem de membros com busca  
 [ ] Modal com detalhes do membro 
 
+## API Fake
+
+**Pending events**
+
+```
+GET http://www.mocky.io/v2/5e3674f43200008300ae3c73
+```
+
+**Finished events**
+
+```
+GET http://www.mocky.io/v2/5e366aa1320000d40cae3c68
+```
+
 ## Estágio atual:
 
 <img src="assets/estagio-atual.gif" width="200em" />
