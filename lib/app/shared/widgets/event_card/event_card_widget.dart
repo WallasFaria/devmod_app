@@ -1,9 +1,17 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:devmod_app/app/shared/models/event_model.dart';
+import 'package:devmod_app/app/shared/tools/format.dart';
 import 'package:flutter/material.dart';
 
 class EventCardWidget extends StatelessWidget {
+  final EventModel event;
+
+  const EventCardWidget({Key key, this.event}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 1,
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       borderOnForeground: true,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
@@ -15,7 +23,25 @@ class EventCardWidget extends StatelessWidget {
               topLeft: Radius.circular(6),
               topRight: Radius.circular(6),
             ),
-            child: Image.asset('assets/mock/javascript.png'),
+            child: Visibility(
+              visible: event.image != null,
+              child: CachedNetworkImage(
+                imageBuilder: (context, imageProvider) => Container(
+                  height: 186,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: imageProvider,
+                      fit: BoxFit.cover,
+                      colorFilter:
+                          ColorFilter.mode(Colors.black12, BlendMode.colorBurn),
+                    ),
+                  ),
+                ),
+                imageUrl: event.image,
+                placeholder: (context, url) => LinearProgressIndicator(),
+                errorWidget: (context, url, error) => Container(),
+              ),
+            ),
           ),
           Container(
             padding: const EdgeInsets.symmetric(
@@ -30,13 +56,11 @@ class EventCardWidget extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       Text(
-                        '23',
+                        event.startsAt.day.toString().padLeft(2, '0'),
                         style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontSize: 22, fontWeight: FontWeight.bold),
                       ),
-                      Text('Mar'),
+                      Text(Format.month(event.startsAt).toUpperCase()),
                     ],
                   ),
                 ),
@@ -47,17 +71,19 @@ class EventCardWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'Oficina de Javascript',
+                          event.title,
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.all(2)),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text('Workshop'),
-                            Text('19:00 - 20:00'),
+                            Text(event.category),
+                            Text(
+                                '${Format.time(event.startsAt)} - ${Format.time(event.endsAt)}'),
                           ],
                         ),
                       ],

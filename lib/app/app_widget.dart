@@ -1,5 +1,5 @@
 import 'package:devmod_app/app/app_module.dart';
-import 'package:devmod_app/app/widgets/bottom_navigation/bottom_navigation_widget.dart';
+import 'package:devmod_app/app/shared/widgets/bottom_navigation/bottom_navigation_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 

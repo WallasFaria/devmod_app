@@ -1,16 +1,16 @@
 import 'package:devmod_app/app/app_controller.dart';
 import 'package:devmod_app/app/app_module.dart';
-import 'package:devmod_app/app/widgets/event_card/event_card_widget.dart';
-import 'package:devmod_app/app/widgets/member_card/member_card_widget.dart';
+import 'package:devmod_app/app/shared/models/event_model.dart';
+import 'package:devmod_app/app/shared/widgets/event_card/event_card_widget.dart';
+import 'package:devmod_app/app/shared/widgets/member_card/member_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import 'home_controller.dart';
+import 'home_module.dart';
 import 'widgets/section_title_widget.dart';
 
 class HomePage extends StatefulWidget {
-  final String title;
-  const HomePage({Key key, this.title = "Home"}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -63,7 +63,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SectionTitle(title: 'Próximo Evento'),
-                  EventCardWidget(),
+                  FutureBuilder(
+                    future: HomeModule.to.bloc<HomeController>().nextEvent,
+                    builder: (_, AsyncSnapshot<EventModel> snapshot) {
+                      if (!snapshot.hasData)
+                        return Center(child: CircularProgressIndicator());
+                      return EventCardWidget(event: snapshot.data);
+                    },
+                  ),
                   SectionTitle(title: 'Membros recém chegados'),
                   MemberCardWidget(),
                   MemberCardWidget(),

@@ -2,7 +2,7 @@ import 'package:devmod_app/app/app_controller.dart';
 import 'package:devmod_app/app/app_module.dart';
 import 'package:devmod_app/app/modules/about/about_page.dart';
 import 'package:devmod_app/app/modules/events/events_module.dart';
-import 'package:devmod_app/app/modules/home/home_page.dart';
+import 'package:devmod_app/app/modules/home/home_module.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -17,7 +17,7 @@ class BottomNavigationWidget extends StatelessWidget {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
+    HomeModule(),
     EventsModule(),
     Center(child: Text('Index 2: School', style: optionStyle)),
     AboutPage(),
